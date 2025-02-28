@@ -1,0 +1,20 @@
+services:
+  mysql-container:
+    image: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=file-transfer-db
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+    networks:
+      - file_net
+
+volumes:
+    mysql-data:
+      driver: local
+
+networks:
+  file_net:
+    external: true

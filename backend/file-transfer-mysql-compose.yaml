@@ -1,0 +1,29 @@
+
+services:
+  mysql-container:
+    image: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=file-transfer-db
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    # MySQL will be checked if it's healthy and ready to accept connections
+  file-transfer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      mysql-container:
+        condition: service_healthy
+     # Ensure MySQL starts before your app
+volumes:
+  mysql-data:
