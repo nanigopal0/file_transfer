@@ -41,16 +41,16 @@ jobs:
           SPRING_MAIL_USERNAME: ${{secrets.MAIL_USERNAME}}
           SPRING_MAIL_PASSWORD: ${{secrets.MAIL_PASSWORD}}
 
-      - name: Build and Push Docker image
-        uses: mr-smithers-excellent/docker-build-push@v6
-        with:
-          image: ${{secrets.DOCKERHUB_IMAGE_NAME}}
-          tags: ${{ github.sha }}
-          dockerfile: 'backend/Dockerfile'
-          context: backend
-          registry: docker.io
-          username: ${{ secrets.FILETRANSFER_REGISTRY_USERNAME }}
-          password: ${{ secrets.FILETRANSFER_REGISTRY_PASSWORD }}
+      #- name: Build and Push Docker image
+        #uses: mr-smithers-excellent/docker-build-push@v6
+#        with:
+#          image: ${{secrets.DOCKERHUB_IMAGE_NAME}}
+#          tags: ${{ github.sha }}
+#          dockerfile: 'backend/Dockerfile'
+#          context: backend
+#          registry: docker.io
+#          username: ${{ secrets.FILETRANSFER_REGISTRY_USERNAME }}
+#          password: ${{ secrets.FILETRANSFER_REGISTRY_PASSWORD }}
 
       - name: Azure Login
         uses: azure/login@v1
