@@ -7,7 +7,7 @@ RUN mvn clean package -DskipTests
 FROM openjdk:21
 WORKDIR /home/app
 # Copy the pom.xml file and the .m2 cache (if any) to build the dependencies first
-COPY pom.xml ./
+COPY backend/pom.xml ./
 #COPY mvnw ./
 #COPY .mvn .mvn
 #RUN chmod +x ./mvnw
