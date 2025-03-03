@@ -1,6 +1,7 @@
 FROM maven:3.9.8-sapmachine-22 AS build
 WORKDIR /home/app
-COPY . .
+COPY pom.xml ./
+COPY src ./src
 RUN mvn clean package -DskipTests
 
 
