@@ -48,6 +48,7 @@ jobs:
         tags: ${{ github.sha }}
         dockerfile: 'backend/Dockerfile'
         registry: docker.io
+        directory: backend
         username: ${{ secrets.FILETRANSFER_REGISTRY_USERNAME }}
         password: ${{ secrets.FILETRANSFER_REGISTRY_PASSWORD }}
 
