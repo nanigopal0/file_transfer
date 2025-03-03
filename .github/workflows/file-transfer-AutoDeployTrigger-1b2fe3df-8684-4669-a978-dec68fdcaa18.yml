@@ -46,6 +46,7 @@ jobs:
         with:
           image: ${{secrets.DOCKERHUB_IMAGE_NAME}}
           tags: ${{ github.sha }}
+          dockerfile: 'backend/Dockerfile'
           registry: docker.io
           username: ${{ secrets.FILETRANSFER_REGISTRY_USERNAME }}
           password: ${{ secrets.FILETRANSFER_REGISTRY_PASSWORD }}
