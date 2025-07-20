@@ -1,6 +1,5 @@
 package com.learn.java.filetransfer.dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;

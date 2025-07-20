@@ -1,9 +1,5 @@
 package com.learn.java.filetransfer.controller;
 
-import com.learn.java.filetransfer.dto.Connection;
-import com.learn.java.filetransfer.dto.User;
-import com.learn.java.filetransfer.service.ConnectionService;
-import com.learn.java.filetransfer.service.UserService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;

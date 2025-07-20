@@ -10,7 +10,6 @@ import ForgotPassword from "./ForgotPassword";
 import Profile from "./Profile";
 import { WebSocketProvider } from "./providers/WebSocketProvider";
 import { useEffect, useState } from "react";
-import { API_BASE_URL_HTTP } from "./util/BaseUrl";
 import Home from "./Home";
 import EditProfile from "./EditProfile";
 import ColabTextEditor from "./ColabTextEditor";
@@ -25,7 +24,7 @@ function App() {
 
     useEffect(() => {
         const pingToServer = async () => {
-            await fetch(`${API_BASE_URL_HTTP}/ping`, {
+            await fetch(`/api/ping`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",

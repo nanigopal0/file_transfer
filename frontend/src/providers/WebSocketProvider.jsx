@@ -1,5 +1,5 @@
-import React, {createContext, useContext, useEffect, useState} from 'react';
-import { API_BASE_URL } from '../util/BaseUrl';
+import {createContext, useContext, useEffect, useState} from 'react';
+
 
 // Create the WebSocket context
 const WebSocketContext = createContext(null);
@@ -9,7 +9,7 @@ export const WebSocketProvider = ({children}) => {
 
     useEffect(() => {
         // Initialize WebSocket when the provider is mounted
-        const socket = new WebSocket(API_BASE_URL);
+        const socket = new WebSocket("/ws");
 
         socket.onopen = () => {
             console.log("WebSocket connection established");

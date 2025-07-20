@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import UserList from './components/UserList';
 import SearchInput from './components/SearchInput';
 import LoadingIndicator from './components/LoadingIndicator';
-import { API_BASE_URL_HTTP } from './util/BaseUrl';
 import { useWebSocket } from './providers/WebSocketProvider';
 
 const Search = () => {

@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { useWebSocket } from "./providers/WebSocketProvider";
 import ProgressBar from "./components/ProgressBar";
 import { CalculateFileSize } from "./util/CalculateFileSize";

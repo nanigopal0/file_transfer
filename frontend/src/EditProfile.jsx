@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { API_BASE_URL_HTTP } from './util/BaseUrl';
 
 const EditProfile = () => {
     const navigate = useNavigate();
@@ -15,7 +14,7 @@ const EditProfile = () => {
         // Update user information in localStorage
         const updatedUser = { ...user, username, email, fullName };
         await fetch(
-            `${API_BASE_URL_HTTP}/user/update`,
+            `/api/user/update`,
             {
                 method: "PUT",
                 headers: {

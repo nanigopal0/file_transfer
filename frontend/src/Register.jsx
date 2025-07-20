@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { API_BASE_URL_HTTP } from './util/BaseUrl';
+
 import LoadingIndicator from './components/LoadingIndicator';
 
 function Register({ onRegister }) {
@@ -21,7 +21,7 @@ function Register({ onRegister }) {
             email: email,
             password: password
         };
-        await fetch(`${API_BASE_URL_HTTP}/register/signup`,
+        await fetch(`/api/register/signup`,
             {
                 method: "POST",
                 headers: {

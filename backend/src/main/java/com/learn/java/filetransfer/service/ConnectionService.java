@@ -2,9 +2,7 @@ package com.learn.java.filetransfer.service;
 
 
 import com.learn.java.filetransfer.dto.Connection;
-import com.learn.java.filetransfer.dto.User;
 import com.learn.java.filetransfer.repository.ConnectionRepository;
-import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
