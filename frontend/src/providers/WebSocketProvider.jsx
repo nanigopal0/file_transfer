@@ -9,7 +9,7 @@ export const WebSocketProvider = ({children}) => {
 
     useEffect(() => {
         // Initialize WebSocket when the provider is mounted
-        const socket = new WebSocket("/ws");
+        const socket = new WebSocket(import.meta.env.VITE_SERVER_URL_WS);
 
         socket.onopen = () => {
             console.log("WebSocket connection established");

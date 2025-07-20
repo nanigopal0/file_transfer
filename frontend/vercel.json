@@ -4,10 +4,6 @@
       "source": "/api/(.*)",
       "destination": "https://file-transfer-dfgzdcabdqbkfsdy.eastasia-01.azurewebsites.net/$1"
     },
-    {
-      "source": "/ws/(.*)",
-      "destination": "wss://file-transfer-dfgzdcabdqbkfsdy.eastasia-01.azurewebsites.net/transfer/$1"
-    },
       {"source": "/(.*)", "destination": "/"}
     ]
   }
